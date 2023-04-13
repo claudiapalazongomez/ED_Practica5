@@ -29,9 +29,6 @@ public class Vista
 	Button boton15 = new Button("C");
 	Button boton14 = new Button("=");
 	Button boton13 = new Button("/");
-	int operador1 = 0;
-	int operador2 = 0;
-	String operacion;
 	boolean nuevoNumeroEnPantalla;
 
 	public Vista()

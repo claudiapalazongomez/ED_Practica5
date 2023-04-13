@@ -41,35 +41,35 @@ public class Controlador implements WindowListener, ActionListener
 		if (botonPulsado.equals("C"))
 		{
 			vista.pantalla.setText("0");
-			vista.operador1 = 0;
-			vista.operador2 = 0;
+			modelo.operador1 = 0;
+			modelo.operador2 = 0;
 			vista.nuevoNumeroEnPantalla = true;
 		} else if (botonPulsado.equals("="))
 		{
-			vista.operador2 = Integer.parseInt(vista.pantalla.getText());
-			if (vista.operacion != null)
+			modelo.operador2 = Integer.parseInt(vista.pantalla.getText());
+			if (modelo.operacion != null)
 			{
-				if (vista.operacion.equals("+"))
+				if (modelo.operacion.equals("+"))
 				{
-					vista.pantalla.setText(modelo.sumar(vista.operador1, vista.operador2) + "");
-				} else if (vista.operacion.equals("-"))
+					vista.pantalla.setText(modelo.sumar(modelo.operador1, modelo.operador2) + "");
+				} else if (modelo.operacion.equals("-"))
 				{
-					vista.pantalla.setText(modelo.resta(vista.operador1, vista.operador2) + "");
-				} else if (vista.operacion.equals("*"))
+					vista.pantalla.setText(modelo.resta(modelo.operador1, modelo.operador2) + "");
+				} else if (modelo.operacion.equals("*"))
 				{
-					vista.pantalla.setText(modelo.producto(vista.operador1, vista.operador2) + "");
-				} else if (vista.operacion.equals("/"))
+					vista.pantalla.setText(modelo.producto(modelo.operador1, modelo.operador2) + "");
+				} else if (modelo.operacion.equals("/"))
 				{
-					vista.pantalla.setText(modelo.division(vista.operador1, vista.operador2) + "");
+					vista.pantalla.setText(modelo.division(modelo.operador1, modelo.operador2) + "");
 				}
 			}
 			vista.nuevoNumeroEnPantalla = true;
-			vista.operacion = null;
+			modelo.operacion = null;
 		} else if (botonPulsado.equals("+") || botonPulsado.equals("-") || botonPulsado.equals("*")
 				|| botonPulsado.equals("/"))
 		{
-			vista.operacion = botonPulsado;
-			vista.operador1 = Integer.parseInt(vista.pantalla.getText());
+			modelo.operacion = botonPulsado;
+			modelo.operador1 = Integer.parseInt(vista.pantalla.getText());
 			vista.nuevoNumeroEnPantalla = true;
 		} else
 		{

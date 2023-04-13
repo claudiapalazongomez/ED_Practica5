@@ -2,6 +2,10 @@ package es.studium.mvc;
 
 public class Modelo
 {
+	int operador1 = 0;
+	int operador2 = 0;
+	String operacion;
+	
 	public int sumar(int num1, int num2) {
 		int resultado;
 		resultado = num1 + num2;
