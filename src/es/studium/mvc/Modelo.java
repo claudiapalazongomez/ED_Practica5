@@ -5,6 +5,7 @@ public class Modelo
 	int operador1 = 0;
 	int operador2 = 0;
 	String operacion;
+	boolean nuevoNumeroEnPantalla;
 	
 	public int sumar(int num1, int num2) {
 		int resultado;
